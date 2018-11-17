@@ -1,1 +1,4 @@
-/* Enter your custom styles here */
+/* Hide Shell Bar */
+.sapMShellBrandingBar {
+    visibility: hidden;
+}
