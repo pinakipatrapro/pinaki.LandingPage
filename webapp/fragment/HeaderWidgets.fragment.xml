@@ -3,11 +3,11 @@
    xmlns:core="sap.ui.core" >
    <HBox justifyContent="Center" class="sapUiSmallMargin">
       <VBox alignItems="Center">
-         <NumericContent value='3.7' scale="M/s" 
+         <NumericContent value='{=${/initialSettings/networkStatus/downlink}.toString()}' scale="M/s" 
             valueColor="Good" indicator="Down" icon="sap-icon://performance"
              press="press" 
          />
-         <Text text="4G | Ping : 150ms"/>
+         <Text text="{/initialSettings/networkStatus/effectiveType} | Ping : {/initialSettings/networkStatus/rtt}"/>
       </VBox>
 
        <VBox alignItems="Center">

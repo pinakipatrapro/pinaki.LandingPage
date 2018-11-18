@@ -2,6 +2,12 @@
    xmlns="sap.m"
    xmlns:core="sap.ui.core" >
    <HBox justifyContent="Center" class="sapUiSmallMargin">
-      <SearchField  class="sapUiSmallMargin" placeholder="Search Google" width="70vw"/>
+      <SearchField id="mainSearchField" enableSuggestions="true"  class="sapUiSmallMargin" 
+      liveChange="suggestSearchfield" placeholder="Search Google" width="70vw"
+      suggestionItems="{path: '/initialSettings/suggestionItems'}" search="search">
+         <suggestionItems>
+            <SuggestionItem text="{name}" key="{name}"/>
+         </suggestionItems>
+      </SearchField>
    </HBox>
 </core:FragmentDefinition>
