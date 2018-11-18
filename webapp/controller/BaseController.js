@@ -4,6 +4,6 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("pinaki.LandingPage.LandingPage.controller.Basecontroller", {
-
+		
 	});
 });

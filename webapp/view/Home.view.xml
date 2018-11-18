@@ -1,9 +1,11 @@
 <mvc:View controllerName="pinaki.LandingPage.LandingPage.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"  xmlns:core="sap.ui.core">
 	<App id="idAppControl">
 		<pages>
 			<Page showHeader="false">
-				<content></content>
+				<content>
+				    <core:Fragment fragmentName="pinaki.LandingPage.LandingPage.fragment.HomeLayout" type="XML" />
+				</content>
 			</Page>
 		</pages>
 	</App>

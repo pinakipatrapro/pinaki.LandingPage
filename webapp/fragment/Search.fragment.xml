@@ -1,0 +1,7 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <HBox justifyContent="Center" class="sapUiSmallMargin">
+      <SearchField  class="sapUiSmallMargin" placeholder="Search Google" width="70vw"/>
+   </HBox>
+</core:FragmentDefinition>
