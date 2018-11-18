@@ -11,11 +11,11 @@
       </VBox>
 
        <VBox alignItems="Center">
-         <NumericContent value='230'  
+         <NumericContent value='{/initialSettings/searchCount/}'  
             valueColor="Critical" indicator="Up" icon="sap-icon://search"
               press="press" 
          />
-         <Text text="Searches today"/>
+         <Text text="Total Searches"/>
       </VBox>
 
    </HBox>

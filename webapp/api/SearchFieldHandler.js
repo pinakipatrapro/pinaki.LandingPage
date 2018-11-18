@@ -44,8 +44,22 @@ sap.ui.define([
      * 
      */
     searchHandler.prototype.search = function(searchtext){
-        //Handle Store
+        this.incrementCouter();
+        this.saveToMemory();
+
         location.href='https://www.google.co.in/search?q='+searchtext;
-    } 
+    }
+
+    searchHandler.prototype.incrementCouter=function(){
+        var model = this.searchControl.getModel();
+        var currentCount = model.getProperty('/initialSettings/searchCount');
+        model.setProperty('/initialSettings/searchCount',currentCount+1);
+    }
+    searchHandler.prototype.saveToMemory=function(){
+        var localStorageName = 'LocalinitialSettings';
+        var model = this.searchControl.getModel();
+        var modelData = model.getProperty('/initialSettings');
+        localStorage.setItem(localStorageName,JSON.stringify(modelData));
+    }
     return searchHandler;
 });

@@ -5,6 +5,7 @@ sap.ui.define([
 	return {
         "appBackground" : "",
         "suggestionItems" : null,
-        "networkStatus":null
+        "networkStatus":null,
+        "searchCount":0
     }
 });

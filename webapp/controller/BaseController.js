@@ -7,14 +7,26 @@ sap.ui.define([
 	return Controller.extend("pinaki.LandingPage.LandingPage.controller.Basecontroller", {
 		registerInitialSettings: function () {
 			var oModel = this.getView().getModel();
-			oModel.setData({ "initialSettings": InitialSettings });
+			var localStorageName = 'LocalinitialSettings';
+
+			oModel.attachPropertyChange(function() {
+				alert();
+			});
+
+			if (localStorage.getItem(localStorageName) === null) {
+				oModel.setData({ "initialSettings": InitialSettings });
+			} else {
+				var storage = localStorage.getItem(localStorageName);
+				oModel.setData({ "initialSettings": JSON.parse(storage) });
+			}
 			this.updateNetworkStatus(oModel);
+			
 		},
 		updateNetworkStatus: function (oModel) {
 			var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-			oModel.setProperty('/initialSettings/networkStatus',connection);
+			oModel.setProperty('/initialSettings/networkStatus', connection);
 			function updateConnectionStatus() {
-				oModel.setProperty('/initialSettings/networkStatus',connection);
+				oModel.setProperty('/initialSettings/networkStatus', connection);
 			}
 			connection.addEventListener('change', updateConnectionStatus);
 		}
