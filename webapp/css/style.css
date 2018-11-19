@@ -1,1 +1,15 @@
-/* Enter your custom styles here */
+/* Hide Shell Bar */
+.sapMShellBrandingBar {
+    visibility: hidden;
+}
+
+/* Remove Shitty dotted lines :)  */
+.sapMFocus > .sapMSFF{
+    outline: none;
+    outline-offset: 0px;
+    border : 0px solid red;
+}
+/* Adjust numeric content size */
+.sapMNCValueScr {
+    font-size: 1.75rem;
+}

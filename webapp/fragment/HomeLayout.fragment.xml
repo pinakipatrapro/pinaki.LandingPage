@@ -1,0 +1,7 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <core:Fragment fragmentName="pinaki.LandingPage.LandingPage.fragment.HeaderWidgets" type="XML" />
+   <core:Fragment fragmentName="pinaki.LandingPage.LandingPage.fragment.Search" type="XML" />
+   <core:Fragment fragmentName="pinaki.LandingPage.LandingPage.fragment.BottomWidgets" type="XML" />
+</core:FragmentDefinition>
